@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description: 'Ingeniero DevOps / DevSecOps con más de 4 años de experiencia en automatización, infraestructura cloud, Kubernetes, CI/CD y seguridad operacional.',
   keywords: ['DevOps', 'DevSecOps', 'AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Infrastructure', 'Chile'],
   authors: [{ name: 'Felipe Velasco Hernández' }],
+  icons: {
+    icon: '/favicon.jpeg',
+    shortcut: '/favicon.jpeg',
+  },
 }
 
 export const viewport: Viewport = {
