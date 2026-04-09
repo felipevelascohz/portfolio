@@ -21,9 +21,10 @@ export function Navigation() {
   const [activeSection, setActiveSection] = useState("inicio")
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const nextLanguage = language === "es" ? "en" : "es"
 
   const toggleLanguage = () => {
-    setLanguage(language === "es" ? "en" : "es")
+    setLanguage(nextLanguage)
   }
 
   useEffect(() => {
@@ -134,7 +135,7 @@ export function Navigation() {
             aria-label={language === "es" ? "Switch to English" : "Cambiar a Español"}
           >
             <Globe className="w-3 h-3" />
-            <span className="uppercase">{language}</span>
+            <span className="uppercase">{nextLanguage}</span>
           </button>
         </div>
       </nav>
@@ -173,7 +174,7 @@ export function Navigation() {
               aria-label={language === "es" ? "Switch to English" : "Cambiar a Español"}
             >
               <Globe className="w-5 h-5" />
-              <span className="text-xs font-medium uppercase">{language}</span>
+              <span className="text-xs font-medium uppercase">{nextLanguage}</span>
             </button>
 
             <button

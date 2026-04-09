@@ -127,6 +127,7 @@ const translations = {
     "contact.link": "Link",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
+    "contact.gitlab": "GitLab",
     "contact.coming_soon": "Próximamente",
     "contact.location.title": "Ubicación",
     "contact.location.city": "Santiago, Chile",
@@ -265,6 +266,7 @@ const translations = {
     "contact.link": "Link",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
+    "contact.gitlab": "GitLab",
     "contact.coming_soon": "Coming soon",
     "contact.location.title": "Location",
     "contact.location.city": "Santiago, Chile",
@@ -292,14 +294,18 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("es")
+  const [language, setLanguageState] = useState<Language>("en")
 
   useEffect(() => {
     // Check localStorage for saved preference
     const saved = localStorage.getItem("language") as Language
     if (saved && (saved === "es" || saved === "en")) {
       setLanguageState(saved)
+      document.documentElement.lang = saved
+      return
     }
+
+    document.documentElement.lang = "en"
   }, [])
 
   const setLanguage = (lang: Language) => {

@@ -14,6 +14,7 @@ export function CertificationsSection() {
       title: t("certifications.aws.title"),
       level: t("certifications.aws.level"),
       issuer: t("certifications.aws.issuer"),
+      verificationUrl: "https://www.credly.com/badges/38861ed9-5e02-43bf-81c4-9b93c7027297/linked_in_profile",
       validPeriod: "2024 – 2027",
       validLabel: t("certifications.aws.valid"),
       logo: "AWS",
@@ -144,10 +145,15 @@ export function CertificationsSection() {
                     </div>
 
                     {/* CTA */}
-                    <button className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-medium">
+                    <a
+                      href={cert.verificationUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-medium"
+                    >
                       {t("certifications.verify")}
                       <ExternalLink className="w-4 h-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

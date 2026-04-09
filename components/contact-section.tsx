@@ -2,7 +2,7 @@
 
 import { useInView } from "@/hooks/use-in-view"
 import { cn } from "@/lib/utils"
-import { Mail, Phone, Linkedin, Github, ExternalLink } from "lucide-react"
+import { Mail, Linkedin, Github, Gitlab, ExternalLink } from "lucide-react"
 import { useLanguage } from "@/lib/i18n"
 
 export function ContactSection() {
@@ -11,13 +11,6 @@ export function ContactSection() {
 
   const contactInfo = [
     {
-      icon: Phone,
-      labelKey: "contact.phone",
-      value: "+56 9 9942 4317",
-      href: "tel:+56999424317",
-      isPlaceholder: false,
-    },
-    {
       icon: Mail,
       labelKey: "contact.email",
       value: "Felipevelasco.211@gmail.com",
@@ -25,25 +18,25 @@ export function ContactSection() {
       isPlaceholder: false,
     },
     {
-      icon: ExternalLink,
-      labelKey: "contact.link",
-      value: "shorturl.at/dqRZ2",
-      href: "https://shorturl.at/dqRZ2",
-      isPlaceholder: false,
-    },
-    {
       icon: Linkedin,
       labelKey: "contact.linkedin",
-      valueKey: "contact.coming_soon",
-      href: "#",
-      isPlaceholder: true,
+      value: "www.linkedin.com/in/felipe-velasco-4125291a3",
+      href: "https://www.linkedin.com/in/felipe-velasco-4125291a3",
+      isPlaceholder: false,
     },
     {
       icon: Github,
       labelKey: "contact.github",
-      valueKey: "contact.coming_soon",
-      href: "#",
-      isPlaceholder: true,
+      value: "github.com/felipevelascohz",
+      href: "https://github.com/felipevelascohz",
+      isPlaceholder: false,
+    },
+    {
+      icon: Gitlab,
+      labelKey: "contact.gitlab",
+      value: "gitlab.com/felipevelascohz",
+      href: "https://gitlab.com/felipevelascohz",
+      isPlaceholder: false,
     },
   ]
 
