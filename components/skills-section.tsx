@@ -3,33 +3,28 @@
 import { useInView } from "@/hooks/use-in-view"
 import { cn } from "@/lib/utils"
 import { 
-  Cloud, 
-  Container, 
   Boxes, 
   Terminal, 
-  FileCode, 
   Github, 
-  Settings, 
-  Package,
   Server,
-  Layers
 } from "lucide-react"
-import { FaGitlab, FaPython } from "react-icons/fa"
+import { FaAws, FaGitlab, FaPython } from "react-icons/fa"
+import { SiAnsible, SiDocker, SiKubernetes, SiPacker, SiTypescript } from "react-icons/si"
 import { useLanguage } from "@/lib/i18n"
 
 const skills = [
-  { name: "Kubernetes", icon: Layers, color: "#326CE5" },
-  { name: "AWS", icon: Cloud, color: "#FF9900" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+  { name: "AWS", icon: FaAws, color: "#FF9900" },
   { name: "Terraform", icon: Boxes, color: "#7B42BC" },
   { name: "GitLab", icon: FaGitlab, color: "#FC6D26" },
-  { name: "Docker", icon: Container, color: "#2496ED" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
   { name: "Bash", icon: Terminal, color: "#4EAA25" },
   { name: "Python", icon: FaPython, color: "#3776AB" },
-  { name: "TypeScript", icon: FileCode, color: "#3178C6" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "CDK", icon: Server, color: "#FF9900" },
   { name: "GitHub", icon: Github, color: "#ffffff" },
-  { name: "Ansible", icon: Settings, color: "#EE0000" },
-  { name: "Packer", icon: Package, color: "#02A8EF" },
+  { name: "Ansible", icon: SiAnsible, color: "#EE0000" },
+  { name: "Packer", icon: SiPacker, color: "#02A8EF" },
 ]
 
 export function SkillsSection() {
