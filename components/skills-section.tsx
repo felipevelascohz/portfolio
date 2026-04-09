@@ -3,19 +3,18 @@
 import { useInView } from "@/hooks/use-in-view"
 import { cn } from "@/lib/utils"
 import { 
-  Boxes, 
   Terminal, 
   Github, 
   Server,
 } from "lucide-react"
 import { FaAws, FaGitlab, FaPython } from "react-icons/fa"
-import { SiAnsible, SiDocker, SiKubernetes, SiPacker, SiTypescript } from "react-icons/si"
+import { SiAnsible, SiDocker, SiKubernetes, SiPacker, SiTerraform, SiTypescript } from "react-icons/si"
 import { useLanguage } from "@/lib/i18n"
 
 const skills = [
   { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
   { name: "AWS", icon: FaAws, color: "#FF9900" },
-  { name: "Terraform", icon: Boxes, color: "#7B42BC" },
+  { name: "Terraform", icon: SiTerraform, color: "#7B42BC" },
   { name: "GitLab", icon: FaGitlab, color: "#FC6D26" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },
   { name: "Bash", icon: Terminal, color: "#4EAA25" },
