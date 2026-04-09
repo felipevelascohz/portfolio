@@ -6,7 +6,6 @@ import {
   Cloud, 
   Container, 
   Boxes, 
-  GitBranch, 
   Terminal, 
   Code2, 
   FileCode, 
@@ -16,13 +15,14 @@ import {
   Server,
   Layers
 } from "lucide-react"
+import { FaGitlab } from "react-icons/fa"
 import { useLanguage } from "@/lib/i18n"
 
 const skills = [
   { name: "Kubernetes", icon: Layers, color: "#326CE5" },
   { name: "AWS", icon: Cloud, color: "#FF9900" },
   { name: "Terraform", icon: Boxes, color: "#7B42BC" },
-  { name: "GitLab", icon: GitBranch, color: "#FC6D26" },
+  { name: "GitLab", icon: FaGitlab, color: "#FC6D26" },
   { name: "Docker", icon: Container, color: "#2496ED" },
   { name: "Bash", icon: Terminal, color: "#4EAA25" },
   { name: "Python", icon: Code2, color: "#3776AB" },
