@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n"
 
 export function HeroSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const cvHref = language === "en" ? "/felipe-velasco-cv-en.pdf" : "/felipe-velasco-cv.pdf"
+  const cvDownloadName = language === "en" ? "Felipe_Velasco_CV_EN.pdf" : "Felipe_Velasco_CV.pdf"
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -193,7 +195,7 @@ export function HeroSection() {
                 className="text-accent hover:text-foreground hover:bg-muted font-medium px-8 tracking-[-0.01em]"
                 asChild
               >
-                <a href="/felipe-velasco-cv.pdf" download="Felipe_Velasco_CV.pdf">
+                <a href={cvHref} download={cvDownloadName}>
                   <Download className="mr-2 w-4 h-4" />
                   {t("hero.cta.download")}
                 </a>
